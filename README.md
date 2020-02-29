@@ -1,16 +1,16 @@
-[![](https://travis-ci.org/Lucas-C/pre-commit-hooks-safety.svg?branch=master)](https://travis-ci.org/Lucas-C/pre-commit-hooks-safety)
-
 A [pre-commit](http://pre-commit.com) hook to check your Python dependencies against [safety-db](//github.com/pyupio/safety-db).
 
-It checks all files containing `requirements` in their name in the repo.
+It checks all files in your current venv or a requirements file if you supply it.
 
 ## Usage
 ```
--   repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-    sha: v1.1.0
+-   repo: https://github.com/Galdanwing/pre-commit-hooks-safety
+    sha: v1.0.0
     hooks:
     -   id: python-safety-dependencies-check
+        args: [exclude, bleach]
 ```
+
 
 ## Alternative local hook
 You'll need to `pip install safety` beforehand:
