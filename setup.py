@@ -5,7 +5,7 @@ setup(
     name='pre-commit-hooks-safety-extra',
     description='A pre-commit hook to check your Python dependencies against safety-db, while also allowing you to exclude requirements',
     url='https://github.com/Galdanwing/pre-commit-hooks-safety',
-    version='1.0.0',
+    version='1.1.1',
 
     author='Antoine van der Horst',
     author_email='antoinevdhorst@gmail.com',

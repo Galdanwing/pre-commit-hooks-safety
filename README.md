@@ -5,9 +5,9 @@ It checks all files in your current venv or a requirements file if you supply it
 ## Usage
 ```
 -   repo: https://github.com/Galdanwing/pre-commit-hooks-safety
-    sha: v1.0.0
+    rev: v1.1.1
     hooks:
-    -   id: python-safety-dependencies-check
+    -   id: python-safety-dependencies-check-extra
         args: [exclude, bleach]
 ```
 
