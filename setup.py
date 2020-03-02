@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name='pre-commit-hooks-safety-extra',
     description='A pre-commit hook to check your Python dependencies against safety-db, while also allowing you to exclude requirements',
-    # url='https://github.com/Lucas-C/pre-commit-hooks-safety',
+    url='https://github.com/Galdanwing/pre-commit-hooks-safety',
     version='1.0.0',
 
     author='Antoine van der Horst',
