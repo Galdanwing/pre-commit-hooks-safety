@@ -14,7 +14,7 @@ def do_the_safety_check(args):
         with open(args.requirements_file) as fp:
             reqs = fp.read()
     else:
-        reqs = subprocess.check_output([sys.executable, '-m', 'pip', 'freeze']).decode()
+        reqs = subprocess.check_output([sys.executable, "-m", "pip", "freeze"]).decode()
 
     if args.exclude:
         reqs = reqs.splitlines()
@@ -36,7 +36,7 @@ def do_the_safety_check(args):
     with open("temp_file.txt", "w+") as file:
         file.write(reqs)
     try:
-        check.main(['--full-report', '--file', 'temp_file.txt'])
+        check.main(["--full-report", "--file", "temp_file.txt"])
     except SystemExit as error:
         if error.code == 0:
             return 0
@@ -74,8 +74,8 @@ def main(args=None):
     )
     args = parser.parse_args(args)
 
-    do_the_safety_check(args)
-    sys.exit(2)
+    safety_check = do_the_safety_check(args)
+    sys.exit(safety_check)
 
 
 if __name__ == "__main__":

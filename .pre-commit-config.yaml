@@ -1,0 +1,24 @@
+default_language_version:
+  python: python3.6
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.5.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: pretty-format-json
+
+  - repo: https://github.com/psf/black
+    # Reformat your code
+    rev: stable
+    hooks:
+      - id: black
+        language_version: python3.6
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    # Typing checks
+    rev: ''  # Use the sha / tag you want to point at
+    hooks:
+      - id: mypy
